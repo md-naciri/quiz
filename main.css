@@ -1,0 +1,71 @@
+body {
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #232f3e;
+  font-family: Verdana;
+  font-size: 24px;
+  color: white;
+  padding: 10px;
+}
+
+.logo {
+  margin-left: 30px;
+}
+.logo img {
+  width: 50px;
+}
+
+.btn {
+  background-color: #232f3e;
+  color: white;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+.btn:hover {
+  background-color: #eb912d;
+}
+.btn:active {
+  background-color: #ec7211;
+}
+
+.op {
+  text-align: left;
+  border-radius: 5px;
+}
+
+.step-component {
+  width: 70%;
+  margin-left: 15%;
+}
+.step-component .before-progress {
+  width: 96%;
+  height: 2px;
+  margin-left: 2%;
+  background-color: #eaeded;
+  position: relative;
+  top: 20.5px;
+  z-index: -1;
+}
+.step-component .before-progress .progress {
+  height: 135%;
+  background-color: #232f3e;
+  width: 0;
+  transition: 0.9s;
+}
+.step-component .circles {
+  display: flex;
+  justify-content: space-between;
+}
+.step-component .circles .circle {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #005276;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eaeded;
+}/*# sourceMappingURL=main.css.map */
