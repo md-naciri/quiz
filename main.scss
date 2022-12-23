@@ -1,0 +1,85 @@
+$bg-color-1: #232f3e;
+$bg-color-2: #eb912d;
+$bg-color-3: #ec7211;
+$color-2:#eaeded;
+$color-3: #005276;
+$color-1: #f8991c;
+
+body{
+    background-color: #fafafa;
+}
+
+header {
+	background-color: $bg-color-1;
+	font-family: Verdana;
+	font-size: 24px;
+	color: white;
+	padding: 10px;
+}
+
+.logo {
+    img{
+        width: 50px;
+    }
+	margin-left: 30px;
+
+}
+.btn {
+	background-color: $bg-color-1;
+	color: white;
+	margin-top: 10px;
+    border-radius: 25px;
+	&:hover {
+		background-color: $bg-color-2;
+	}
+    &:active {
+		background-color: $bg-color-3;
+    }
+}
+.op {
+	text-align: left;
+    border-radius: 5px;
+}
+.step-component{
+    width:70%;
+    margin-left:15%;
+    .before-progress{
+        width:96%;
+        height: 2px;
+        margin-left: 2%;
+        background-color: $color-2;
+        position: relative;
+        top:20.5px;
+        z-index: -1;
+        .progress{
+            height: 135%;
+            background-color: $bg-color-1;
+            width:0;
+            transition: .9s;
+        }
+    }
+    .circles{
+        display: flex;
+        justify-content: space-between;
+        .circle{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:$color-3;
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+            background-color: $color-2;
+        }
+    }
+    // .btn-next{
+    //     background-color: rgb(3, 3, 177);
+    //     border:none;
+    //     width: 120px;
+    //     border-radius: 5px;
+    //     color: white;
+    //     margin-left:50%;
+    //     transform: translateX(-50%) ;
+    // }
+}
