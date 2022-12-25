@@ -24,7 +24,9 @@ header {
 	margin-left: 30px;
 
 }
+
 .btn {
+    justify-content: end;
 	background-color: $bg-color-1;
 	color: white;
 	margin-top: 10px;
@@ -36,10 +38,12 @@ header {
 		background-color: $bg-color-3;
     }
 }
+
 .op {
 	text-align: left;
     border-radius: 5px;
 }
+
 .step-component{
     width:70%;
     margin-left:15%;
@@ -73,13 +77,4 @@ header {
             background-color: $color-2;
         }
     }
-    // .btn-next{
-    //     background-color: rgb(3, 3, 177);
-    //     border:none;
-    //     width: 120px;
-    //     border-radius: 5px;
-    //     color: white;
-    //     margin-left:50%;
-    //     transform: translateX(-50%) ;
-    // }
 }

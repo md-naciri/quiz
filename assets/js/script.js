@@ -2,8 +2,10 @@
 let circle = document.querySelectorAll(".circle");
 let progress = document.querySelector(".progress");
 let index = 0;
+let count = 0;
 circle[index].style.background = "#232f3e";
 circle[index].style.color = 'white';
+
 
 function nextStep(){
     if (index < 3) {
@@ -24,49 +26,44 @@ $(document).ready(function () {
     })
 })
 
-let op = document.querySelectorAll('.op');
-// let questionq = document.getElementById("quest");
+let choice = document.querySelectorAll('.op');
 let j = 0;
-
-
-
 let k = 0;
-
-function GetQeustions() {
+questions.sort(function(){return Math.random() -0.5});
+function GetQeustion() {
     document.getElementById("quest").innerHTML = questions[k].question;
-    op.forEach(option => {
-        option.innerHTML = questions[k].options[j].text;
+    choice.forEach(option => {
+        option.innerHTML = questions[k].options[j].letter;
+        option.innerHTML +=") "+questions[k].options[j].text;
         j++;
     });
     j = 0;
 }
 
-GetQeustions();
+GetQeustion();
 
-op.forEach(option => {
+choice.forEach(option => {
     option.onclick = () => {
+        let answered=option.textContent.slice(0,1);
+        const {correct} = questions[k].answer;
+        console.log(answered);
+        console.log(correct);
+        if (answered==correct){ 
+            count++;
+        }
         k++;
         if (k < questions.length) {
-            GetQeustions();
+            GetQeustion();
+            
+        }
+        else{
+            nextStep();
+            console.log(count);
         }
     }
 });
 
-// let btnNext = document.querySelector(".btn-next");
-// let btnNext = document.querySelector(".btn-next");
 
-
-
-// btnNext.onclick = () => {
-//     if (index < 3) {
-//         circle[index].innerHTML = '<i class="fa-solid fa-check"></i>';
-//         circle[index].style.color = '#f8991c';
-//         circle[index + 1].style.background = '#232f3e';
-//         circle[index + 1].style.color = 'white';
-//         index++;
-//         progress.style.width = `${index * 50}%`;
-//     }
-// }
 
 
 
