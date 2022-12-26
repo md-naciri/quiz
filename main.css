@@ -1,46 +1,21 @@
 body {
   background-color: #fafafa;
 }
-
-header {
+body header {
   background-color: #232f3e;
-  font-family: Verdana;
-  font-size: 24px;
-  color: white;
   padding: 10px;
 }
-
-.logo {
+body header .logo {
   margin-left: 30px;
 }
-.logo img {
+body header .logo img {
   width: 50px;
 }
-
-.btn {
-  justify-content: end;
-  background-color: #232f3e;
-  color: white;
-  margin-top: 10px;
-  border-radius: 25px;
-}
-.btn:hover {
-  background-color: #eb912d;
-}
-.btn:active {
-  background-color: #ec7211;
-}
-
-.op {
-  text-align: left;
-  border-radius: 5px;
-}
-
-.step-component {
+body main .step-component {
   width: 70%;
   margin-left: 15%;
 }
-.step-component .before-progress {
+body main .step-component .step-component-container {
   width: 96%;
   height: 2px;
   margin-left: 2%;
@@ -49,17 +24,17 @@ header {
   top: 20.5px;
   z-index: -1;
 }
-.step-component .before-progress .progress {
+body main .step-component .step-component-container .step-component-bar {
   height: 135%;
   background-color: #232f3e;
   width: 0;
   transition: 0.9s;
 }
-.step-component .circles {
+body main .step-component .circles {
   display: flex;
   justify-content: space-between;
 }
-.step-component .circles .circle {
+body main .step-component .circles .circle {
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -69,4 +44,53 @@ header {
   height: 40px;
   border-radius: 50%;
   background-color: #eaeded;
+}
+body main .btn {
+  background-color: #232f3e;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 25px;
+}
+body main .btn:hover {
+  background-color: #eb912d;
+}
+body main .btn:active {
+  background-color: #ec7211 !important;
+  border: none;
+}
+body main #questions .choice {
+  text-align: left;
+  border-radius: 5px;
+}
+body main .progress-bar-container {
+  width: 60%;
+  height: 15px;
+  margin-left: 20%;
+  border-radius: 25px;
+  background-color: rgba(235, 134, 45, 0.2392156863);
+}
+body main .progress-bar-container .progress-bar {
+  height: 100%;
+  border-radius: 25px;
+  background-color: #ec7211;
+  width: 50%;
+  transition: 0.5s;
+  box-shadow: 0 0 3px #ec7211;
+}
+body main #result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Verdana;
+  font-weight: bolder;
+}
+body main #correction {
+  font-family: Verdana;
+}
+body main #correction .right-answer {
+  color: #4F8210;
+}
+body main #correction .quest-text {
+  color: #96500B;
 }/*# sourceMappingURL=main.css.map */

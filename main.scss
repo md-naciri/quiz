@@ -1,80 +1,115 @@
-$bg-color-1: #232f3e;
-$bg-color-2: #eb912d;
-$bg-color-3: #ec7211;
-$color-2:#eaeded;
-$color-3: #005276;
-$color-1: #f8991c;
+$color-1: #232f3e; //header background color - buttons background color - step-component-bar color
+$color-2: #eaeded; //(step-component-container line) $ (circles) of the stepper component background color
+$color-3: #005276; //Icons colors (inside the stepper component)
+$color-4: #eb912d; //(Hover) buttons background color
+$color-5: #ec7211; //(Active) buttons background color
+$color-6: #fafafa; //Body background color
+$main-font: Verdana;
 
-body{
-    background-color: #fafafa;
-}
-
-header {
-	background-color: $bg-color-1;
-	font-family: Verdana;
-	font-size: 24px;
-	color: white;
-	padding: 10px;
-}
-
-.logo {
-    img{
-        width: 50px;
-    }
-	margin-left: 30px;
-
-}
-
-.btn {
-    justify-content: end;
-	background-color: $bg-color-1;
-	color: white;
-	margin-top: 10px;
-    border-radius: 25px;
-	&:hover {
-		background-color: $bg-color-2;
-	}
-    &:active {
-		background-color: $bg-color-3;
-    }
-}
-
-.op {
-	text-align: left;
-    border-radius: 5px;
-}
-
-.step-component{
-    width:70%;
-    margin-left:15%;
-    .before-progress{
-        width:96%;
-        height: 2px;
-        margin-left: 2%;
-        background-color: $color-2;
-        position: relative;
-        top:20.5px;
-        z-index: -1;
-        .progress{
-            height: 135%;
-            background-color: $bg-color-1;
-            width:0;
-            transition: .9s;
+body {
+    background-color: $color-6;
+    header {
+        background-color: $color-1;
+        padding: 10px;
+        .logo {
+            margin-left: 30px;
+        
+            img {
+                width: 50px;
+            }
         }
     }
-    .circles{
-        display: flex;
-        justify-content: space-between;
-        .circle{
-            font-weight: bold;
+    main{
+        .step-component {
+            width: 70%;
+            margin-left: 15%;
+        
+            .step-component-container {
+                width: 96%;
+                height: 2px;
+                margin-left: 2%;
+                background-color: $color-2;
+                position: relative;
+                top: 20.5px;
+                z-index: -1;
+        
+                .step-component-bar {
+                    height: 135%;
+                    background-color: $color-1;
+                    width: 0;
+                    transition: .9s;
+                }
+            }
+        
+            .circles {
+                display: flex;
+                justify-content: space-between;
+        
+                .circle {
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color-3;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $color-2;
+                }
+            }
+        }
+        .btn {
+            background-color: $color-1;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 25px;
+        
+            &:hover {
+                background-color: $color-4;
+            }
+        
+            &:active {
+                background-color: $color-5 !important;
+                border: none;
+            }
+        }
+        #questions{
+            .choice {
+                text-align: left;
+                border-radius: 5px;
+            }
+        }
+        .progress-bar-container {
+            width: 60%;
+            height: 15px;
+            margin-left: 20%;
+            border-radius: 25px;
+            background-color: #eb862d3d;
+            .progress-bar {
+                height: 100%;
+                border-radius: 25px;
+                background-color: $color-5;
+                width: 50%;
+                transition: .5s;
+                box-shadow: 0 0 3px $color-5;
+            }
+        }
+        #result{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            color:$color-3;
-            width:40px;
-            height:40px;
-            border-radius: 50%;
-            background-color: $color-2;
+            font-family: $main-font;
+            font-weight: bolder;
+        }
+        #correction {
+            font-family: $main-font;
+            .right-answer{
+                color: #4F8210;
+            }
+            .quest-text{
+                color: #96500B;
+            }
         }
     }
 }
