@@ -9,7 +9,6 @@ questions = [
       { letter: "D", text: "Users can permanently run enough instances to handle peak workloads." }
     ],
     answer: { correct: "C", correction: "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load." }
-
   },
   {
     question: "Which AWS service would simplify the migration of a database to AWS?",
