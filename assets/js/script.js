@@ -7,7 +7,7 @@ let corrections = [];
 let correction = "";
 let answered = "";
 const countDown = document.getElementById("countdown");
-let time = 15;
+let time = 30;
 circle[index].style.background = "#232f3e";
 circle[index].style.color = 'white';
 
@@ -35,7 +35,7 @@ function downTimer() {
         corrections.push({ question: questions[k].question, answer: questions[k].answer.correction });
         k++;
         if (k < questions.length) {
-            time = 15;
+            time = 30;
             GetQeustion();
             downTimer();
         }
@@ -60,7 +60,7 @@ $(document).ready(function () {
     $("#questions").hide();
     $(".progress-bar-container").hide();
     $("#result").hide();
-    $("#correction").hide();
+    $("#show-correction").hide();
     $("#start").click(function () {
         nextStep();
         downTimer();
@@ -89,7 +89,7 @@ GetQeustion();
 
 choice.forEach(option => {
     option.onclick = () => {
-        time = 15;
+        time = 30;
         answered = option.textContent.slice(0, 1);
         const { correct } = questions[k].answer;
         if (answered == correct) {
@@ -112,7 +112,7 @@ $("#right").click(function () {
     circle[index].innerHTML = '<i class="fa-solid fa-check"></i>';
     circle[index].style.color = '#f8991c';
     $("#result").hide();
-    $("#correction").show();
+    $("#show-correction").show();
 })
 
 

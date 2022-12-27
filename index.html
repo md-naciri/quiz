@@ -40,8 +40,8 @@
             <br />
             <div>
                 <h6>1. Only 30 seconds will be given for each question.</h6>
-                <h6>3. Once the timer runs out, you are unable to select any option.</h6>
-                <h6>5. Your score will be determined by how accurately you respond.</h6>
+                <h6>2. Once the timer runs out, you are unable to select any option.</h6>
+                <h6>3. Your score will be determined by how accurately you respond.</h6>
             </div>
             <button type="button" id="start" class="btn mt-4">Start Quiz</button>
         </div>
@@ -54,15 +54,18 @@
             <div class="text-center fw-bold">0:<span id="countdown"></span></div>
         </div>
         <div id="result" class="container col-lg-6 col-md-8 col-sm-10 shadow p-3 my-5 bg-white rounded">
-            <h5 class="fw-bold">You answered properly <span id="score"></span>% of the questions</h5>
-            <button type="button" id="right" class="btn">Right answers</button>
+            <h6 class="fw-bold">You answered properly <span id="score"></span>% of the questions</h6>
+            <button type="button" id="right" class="btn fs-6">Display the questions you answered wrong</button>
         </div>
 
         <div class="progress-bar-container">
             <div class="progress-bar"></div>
         </div>
-
-        <div id="correction" class="mt-5"></div>
+        <div id="show-correction">
+            <button class="btn" onclick="location.reload();">Retake the quiz</button>
+            <div id="correction" class="mt-5"></div>
+        </div>
+        
 
     </main>
 

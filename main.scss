@@ -101,14 +101,25 @@ body {
             align-items: center;
             font-family: $main-font;
             font-weight: bolder;
-        }
-        #correction {
-            font-family: $main-font;
-            .right-answer{
-                color: #4F8210;
+            .btn{
+                border-radius: 5px;
             }
-            .quest-text{
-                color: #96500B;
+        }
+        #show-correction{
+            .btn{
+                position:relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 40px;
+            }
+            #correction {
+                font-family: $main-font;
+                .right-answer{
+                    color: #4F8210;
+                }
+                .quest-text{
+                    color: #96500B;
+                }
             }
         }
     }

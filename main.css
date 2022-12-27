@@ -85,12 +85,21 @@ body main #result {
   font-family: Verdana;
   font-weight: bolder;
 }
-body main #correction {
+body main #result .btn {
+  border-radius: 5px;
+}
+body main #show-correction .btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+}
+body main #show-correction #correction {
   font-family: Verdana;
 }
-body main #correction .right-answer {
+body main #show-correction #correction .right-answer {
   color: #4F8210;
 }
-body main #correction .quest-text {
+body main #show-correction #correction .quest-text {
   color: #96500B;
 }/*# sourceMappingURL=main.css.map */
