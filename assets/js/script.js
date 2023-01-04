@@ -63,7 +63,6 @@ function GetQeustion() {
         if (this.readyState === 4 && this.status === 200) {
             mydata = JSON.parse(this.responseText);
             // mydata.sort(function () { return Math.random() - 0.5 });
-            // lengthtable = mydata.length;
             document.getElementById("quest").innerHTML = mydata[k]['question'];
             let c = 0;
             choice.forEach(option => {
@@ -80,7 +79,7 @@ function GetQeustion() {
         }
 
     }
-    mydata.open('GET', 'assets/js/data.json', true);
+    mydata.open('GET', 'data.json', true);
     mydata.send()
 }
 
