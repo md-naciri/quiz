@@ -11,7 +11,6 @@ let answered = "";
 circle[index].style.background = "#232f3e";
 circle[index].style.color = 'white';
 
-// let lengthtable=0;
 
 
 function beforeResult(mydata) {
@@ -57,9 +56,12 @@ let choice = document.querySelectorAll('.choice');
 let j = 0;
 let k = 0;
 function GetQeustion() {
-    var mydata = new XMLHttpRequest();
+    //creating a new instance of the XMLHttpRequest object, which is used to send HTTP requests to a server.
+    let mydata = new XMLHttpRequest();
 
     mydata.onreadystatechange = function () {
+        //The value of 4 for the readyState property indicates that the request is complete and the data has been received. 
+        //The value of 200 for the status property indicates that the request was successful.
         if (this.readyState === 4 && this.status === 200) {
             mydata = JSON.parse(this.responseText);
             // mydata.sort(function () { return Math.random() - 0.5 });
@@ -79,6 +81,8 @@ function GetQeustion() {
         }
 
     }
+    // Opening a GET request to retrieve the contents of the "data.json" file.
+    // The true value at the end of the line indicates that the request should be made asynchronously.
     mydata.open('GET', 'data.json', true);
     mydata.send()
 }

@@ -1,13 +1,15 @@
 <?php
 require('dataManagement.php');
 $table = new Database();
-// $elementsq = $table->getData('SELECT * FROM les_ques');
-$elements = $table->getData('SELECT * FROM les_ques INNER JOIN les_rep ON les_ques.id = les_rep.id ORDER BY RAND() LIMIT 10');
+//The getData method of the $table object sends an SQL query to the database and returns the result set as an array
+$elements = $table->getData('SELECT * FROM les_ques INNER JOIN les_rep ON les_ques.id = les_rep.id ORDER BY RAND()');
 foreach ($elements as $element) {
     $newTable[] = $element;
 }
-// we use this for using special charcters in database
+//Encoding the $newTable array as a JSON string. 
+//The JSON_UNESCAPED_UNICODE is used to prevent special Unicode characters from being escaped in the JSON string.
 $json = json_encode($newTable, JSON_UNESCAPED_UNICODE);
+//Writing the JSON string to a file called "data.json".
 file_put_contents('data.json', $json);
 ?>
 

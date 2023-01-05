@@ -2,7 +2,7 @@
 <?php
 class Database
 {
-    protected $conn;
+    private $conn;
     public function __construct()
     {
         try {
@@ -18,6 +18,4 @@ class Database
         return $preparing->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
-// var_dump($dsn);
 ?>
